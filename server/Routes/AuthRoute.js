@@ -1,0 +1,21 @@
+const { Signup, Login, SellerLocation, BuyerLocation, ManagerLocation, Shipment, BuyerShipment, MyShipments, Action, BuyerMyShipments, ManagerMyShipments, AddProduct, GetProduct } = require('../Controllers/AuthController')
+const { userVerification } = require('../Middlewares/AuthMiddleware')
+const router = require('express').Router()
+
+router.post('/seller-location', SellerLocation)
+router.put('/seller/action', Action)
+router.put('/manager/action', Action)
+router.post('/buyer-location', BuyerLocation)
+router.post('/manager-location', ManagerLocation)
+router.post('/seller/create-shipment', Shipment)
+router.post('/seller/add-product', AddProduct)
+router.post('/buyer/create-shipment', BuyerShipment)
+router.get('/seller/my-shipments', MyShipments)
+router.get('/manager/my-shipments', ManagerMyShipments)
+router.get('/buyer/my-shipments', BuyerMyShipments)
+router.get('/get-product', GetProduct)
+router.post('/signup', Signup)
+router.post('/login', Login)
+router.post('/',userVerification)
+
+module.exports = router

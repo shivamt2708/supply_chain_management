@@ -1,0 +1,4 @@
+const myContract1 = await ShipmentContract.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3");
+const myContract = await ShipmentContract.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3");
+const myContract = await MyContract.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3");
+const ShipmentContract = await ethers.getContractFactory("ShipmentContract");
